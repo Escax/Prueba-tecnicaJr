@@ -24,3 +24,8 @@ Primero, clona este repositorio en tu máquina local:
 
 https://github.com/Escax/Prueba-tecnicaJr.git
 
+## Link de swagger para visualizar los endpoints:
+
+http://localhost:8080/swagger-ui.html
+
+
