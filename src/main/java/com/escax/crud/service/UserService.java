@@ -7,6 +7,7 @@ import com.escax.crud.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -37,6 +38,14 @@ public class UserService {
         List<User> users = userRepository.findByNameContainingIgnoreCase(name);
         return users.stream().map(userMapper::toDTO).toList();
     }
+
+    public List<UserDTO> findAllUsers() {
+        List<User> users = userRepository.findAll();
+        return users.stream()
+                .map(user -> new UserDTO(user.getId(), user.getName(), user.getEmail(), "******", Collections.emptyList()))
+                .toList();
+    }
+
 
 
 }
