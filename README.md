@@ -1,4 +1,4 @@
-# PruebaTecnicaJr
+# Prueba_Tecnica-Jr
 
 # Proyecto CRUD con Spring Boot y PostgreSQL
 
