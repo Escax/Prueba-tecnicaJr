@@ -22,3 +22,5 @@ El proyecto está compuesto por los siguientes servicios:
 
 Primero, clona este repositorio en tu máquina local:
 
+https://github.com/Escax/Prueba-tecnicaJr.git
+
