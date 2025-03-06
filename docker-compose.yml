@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # Servicio de la base de datos PostgreSQL usando el Dockerfile.db
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    container_name: prueba_tecnica
+    environment:
+      - POSTGRES_DB=prueba_tecnica
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - prueba_tecnica-data:/var/lib/postgresql/data
+
+  # Servicio de la aplicación Spring Boot
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: prueba_tecnica
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/prueba_tecnica
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=admin
+
+volumes:
+  prueba_tecnica-data:
