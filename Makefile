@@ -1,6 +1,9 @@
 # Nombre del contenedor para evitar duplicados
 CONTAINER_NAME=prueba_tecnica
 
+# Ejecutar la aplicación en Docker
+run: build up
+
 # Construir los contenedores
 build:
 	docker-compose build
