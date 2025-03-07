@@ -1,28 +1,27 @@
--- Crear base de datos y tablas
-CREATE DATABASE prueba_tecnica;
-
--- Usar la base de datos
-\c prueba_tecnica;
-
--- Crear tabla de usuarios con contraseña
-CREATE TABLE users (
+-- Crear tabla de usuarios (si no existe)
+CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    email VARCHAR(100) UNIQUE,
-    password VARCHAR(255)
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
--- Crear tabla de pedidos
-CREATE TABLE orders (
-     id SERIAL PRIMARY KEY,
-        description VARCHAR(255),
-        user_id INT,
-        FOREIGN KEY (user_id) REFERENCES user_id(id)
+-- Crear tabla de pedidos (si no existe)
+CREATE TABLE IF NOT EXISTS orders (
+    id SERIAL PRIMARY KEY,
+    description TEXT NOT NULL,
+    user_id INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
--- Insertar algunos datos iniciales
-INSERT INTO users (name, email, password) VALUES ('Juan Pérez', 'juan@correo.com', 'password123');
-INSERT INTO users (name, email, password) VALUES ('Ana García', 'ana@correo.com', 'password456');
+-- Insertar usuarios iniciales
+INSERT INTO users (name, email, password) VALUES
+('Juan Pérez', 'juan.perez@email.com', 'password123'),
+('María García', 'maria.garcia@email.com', 'securepass'),
+('Carlos López', 'carlos.lopez@email.com', 'mypassword');
 
-INSERT INTO orders (description, user_id) VALUES ('Pedido de zapatos', 1);
-INSERT INTO orders (description, user_id) VALUES ('Pedido de computadora', 2);
+-- Insertar pedidos iniciales
+INSERT INTO orders (description, user_id) VALUES
+('Pedido de prueba 1', 1),
+('Pedido de prueba 2', 2),
+('Pedido de prueba 3', 3);
