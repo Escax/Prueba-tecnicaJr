@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.db
-    container_name: prueba_tecnica
+    container_name: prueba_tecnica_db  # Cambié el nombre para evitar conflicto
     environment:
       - POSTGRES_DB=prueba_tecnica
       - POSTGRES_USER=postgres
@@ -20,8 +20,8 @@ services:
   api:
     build:
       context: .
-      dockerfile: Dockerfile.api
-    container_name: prueba_tecnica
+      dockerfile: Dockerfile  # Asegúrate de que el nombre coincida con tu Dockerfile
+    container_name: prueba_tecnica_api  # Cambié el nombre para evitar conflicto
     ports:
       - "8080:8080"
     depends_on:

@@ -1,16 +1,33 @@
+# Nombre del contenedor para evitar duplicados
+CONTAINER_NAME=prueba_tecnica
 
-# Comando para construir y levantar los contenedores
-run:
-	docker-compose up --build
+# Construir los contenedores
+build:
+	docker-compose build
 
-# Comando para detener y eliminar los contenedores
+# Levantar los contenedores en segundo plano
+up:
+	docker-compose up -d
+
+# Ver logs de la API
+logs:
+	docker-compose logs -f api
+
+# Detener y eliminar los contenedores
 down:
 	docker-compose down
 
-# Comando para limpiar (eliminar imágenes y volúmenes no utilizados)
-clean:
-	docker-compose down --volumes --rmi all
+# Reiniciar los contenedores
+restart: down up
 
-# Comando para ver los logs de los contenedores
-logs:
-	docker-compose logs -f
+# Ejecutar pruebas dentro del contenedor de la API
+test:
+	docker exec -it $(CONTAINER_NAME) mvn test
+
+# Ejecutar la aplicación sin usar Docker (útil para debugging local)
+run-local:
+	mvn clean spring-boot:run
+
+# Acceder a la base de datos dentro del contenedor
+db-shell:
+	docker exec -it $(CONTAINER_NAME) psql -U postgres -d prueba_tecnica
