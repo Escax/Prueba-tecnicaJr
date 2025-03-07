@@ -1,4 +1,4 @@
-# Prueba_Tecnica-Jr
+# Prueba Tecnica Jr
 
 # Proyecto CRUD con Spring Boot y PostgreSQL
 
@@ -32,8 +32,8 @@ https://github.com/Escax/Prueba-tecnicaJr.git
 
 2️⃣ Levantar el proyecto con Docker:
 
-- make build  # Construir las imágenes de Docker
-- make up     # Levantar los contenedores
+- make build         # Construir las imágenes de Docker
+- make up            # Levantar los contenedores
 
 Si make no está disponible, usa:
 
