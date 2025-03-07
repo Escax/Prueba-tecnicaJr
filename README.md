@@ -11,7 +11,7 @@ El proyecto está compuesto por los siguientes servicios:
 - **API Spring Boot** - Una aplicación Java que implementa la lógica del CRUD para gestionar los datos.
 - **Base de Datos PostgreSQL** - Un contenedor Docker que aloja una base de datos PostgreSQL que la API utiliza para almacenar los datos.
 
-##🚀 Tecnologías utilizadas
+## 🚀 Tecnologías utilizadas
 - Java 21
 
 - Spring Boot 3.4.3
@@ -32,16 +32,16 @@ https://github.com/Escax/Prueba-tecnicaJr.git
 
 2️⃣ Levantar el proyecto con Docker:
 
-make build  # Construir las imágenes de Docker
-make up     # Levantar los contenedores
+- make build  # Construir las imágenes de Docker
+- make up     # Levantar los contenedores
 
 Si make no está disponible, usa:
 
-docker-compose up --build -d
+- docker-compose up --build -d
 
 3️⃣ Verificar los contenedores:
 
- docker ps
+- docker ps
 
 4️⃣ Acceder a Swagger para probar la API:
 
