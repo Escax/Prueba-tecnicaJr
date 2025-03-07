@@ -53,13 +53,13 @@ http://localhost:8080/swagger-ui.html
 make down   # Detener y eliminar contenedores
 
 - Sin make:
-  
+- 
 docker-compose down -v
 
 
 # 📌 Autor
 
-Esneider - 
+**Esneider** - 
 
 
 
