@@ -48,6 +48,19 @@ Si make no está disponible, usa:
 http://localhost:8080/swagger-ui.html
 
 
+## 🛑 Detener y Eliminar Contenedores
+
+make down   # Detener y eliminar contenedores
+
+- Sin make:
+  
+docker-compose down -v
+
+
+# 📌 Autor
+
+Esneider - 
+
 
 
 
