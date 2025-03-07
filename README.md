@@ -28,6 +28,25 @@ El proyecto está compuesto por los siguientes servicios:
 
 1️⃣ Clonar el repositorio:
 
+https://github.com/Escax/Prueba-tecnicaJr.git
+
+2️⃣ Levantar el proyecto con Docker:
+
+make build  # Construir las imágenes de Docker
+make up     # Levantar los contenedores
+
+Si make no está disponible, usa:
+
+docker-compose up --build -d
+
+3️⃣ Verificar los contenedores:
+
+ docker ps
+
+4️⃣ Acceder a Swagger para probar la API:
+
+http://localhost:8080/swagger-ui.html
+
 
 
 
