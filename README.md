@@ -32,8 +32,7 @@ https://github.com/Escax/Prueba-tecnicaJr.git
 
 2️⃣ Levantar el proyecto con Docker:
 
-- make build         # Construir las imágenes de Docker
-- make up            # Levantar los contenedores
+- make run            # Levantar el proyecto
 
 Si make no está disponible, usa:
 
