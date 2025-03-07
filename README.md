@@ -2,7 +2,7 @@
 
 # Proyecto CRUD con Spring Boot y PostgreSQL
 
-Este es un proyecto de prueba técnica para desarrollar una API REST con operaciones CRUD utilizando Spring Boot y PostgreSQL. El proyecto está diseñado para ser ejecutado dentro de contenedores Docker, facilitando su despliegue y ejecución en cualquier entorno.
+Este es un proyecto CRUD desarrollado con Spring Boot, PostgreSQL y Docker, siguiendo buenas prácticas como DTOs, MapStruct, validaciones y pruebas.
 
 ## 🏗️ Estructura del Proyecto
 
@@ -11,21 +11,24 @@ El proyecto está compuesto por los siguientes servicios:
 - **API Spring Boot** - Una aplicación Java que implementa la lógica del CRUD para gestionar los datos.
 - **Base de Datos PostgreSQL** - Un contenedor Docker que aloja una base de datos PostgreSQL que la API utiliza para almacenar los datos.
 
-## 📄Requisitos
+##🚀 Tecnologías utilizadas
+- Java 21
 
-- Docker y Docker Compose instalados en tu máquina.
-- JDK 21 instalado si deseas ejecutar la aplicación sin contenedores Docker.
+- Spring Boot 3.4.3
 
-## Instrucciones de Uso
+- PostgreSQL
 
-### 🔽 Clonar el Repositorio
+- Docker y Docker Compose
 
-Primero, clona este repositorio en tu máquina local:
+- Swagger para documentación
 
-https://github.com/Escax/Prueba-tecnicaJr.git
+- MapStruct para mapeo de entidades
 
-## 🔠 Link de swagger para visualizar los endpoints:
+## 🔧 Instalación y ejecución
 
-http://localhost:8080/swagger-ui.html
+1️⃣ Clonar el repositorio:
+
+
+
 
 
